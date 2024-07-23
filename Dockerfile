@@ -1,5 +1,5 @@
 # Use the official PHP image with Apache
-FROM --platform=linux/amd64 php:8.0-apache
+FROM --platform=linux/amd64 php:8.1-apache
 
 # Set working directory
 WORKDIR /var/www/html
@@ -31,7 +31,7 @@ RUN docker-php-ext-install -j$(nproc) intl
 # RUN docker-php-ext-install -j$(nproc) pdo 
 RUN docker-php-ext-install -j$(nproc) pdo_mysql 
 RUN docker-php-ext-install -j$(nproc) mysqli 
-RUN docker-php-ext-install -j$(nproc) zip 
+#RUN docker-php-ext-install -j$(nproc) zip 
 RUN docker-php-ext-install -j$(nproc) soap 
 RUN docker-php-ext-install -j$(nproc) bcmath 
 RUN docker-php-ext-install -j$(nproc) opcache 
